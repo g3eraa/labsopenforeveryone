@@ -1,0 +1,4 @@
+*.o
+Makefile
+program
+program_1
