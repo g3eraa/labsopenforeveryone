@@ -1,3 +1,4 @@
 *.o
 program
-program_1
+*.bin
+*.sh
