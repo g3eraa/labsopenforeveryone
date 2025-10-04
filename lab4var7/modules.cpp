@@ -28,8 +28,11 @@ void quickSort(Word* words, int left, int right) {
     int j = right;
     
     while (i <= j) {
-        while (words[i].length > pivot) i++;
-        while (words[j].length < pivot) j--;
+        
+        while (words[i].length > pivot || 
+               (words[i].length == pivot && i < (left + right) / 2)) i++;
+        while (words[j].length < pivot || 
+               (words[j].length == pivot && j > (left + right) / 2)) j--;
         if (i <= j) {
             Word temp = words[i];
             words[i] = words[j];
